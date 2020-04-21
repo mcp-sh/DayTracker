@@ -6,6 +6,21 @@
         });
     }
     // console.log(sortDates(notInSh));
+    
+    // Function to get an array of single dates between startDate and endDate    
+    function getDates(startDate, stopDate) {
+        var dateArray = [];
+        var currentDate = moment(startDate);
+        var stopDate = moment(stopDate);
+        while (currentDate <= stopDate) {
+            dateArray.push( moment(currentDate).format('YYYYMMDD') )
+            currentDate = moment(currentDate).add(1, 'days');
+        }
+        return dateArray;
+    }
+    //This array can then be saved to a database
+    const singleDays = getDates("20200412", "20200418");
+    // console.log(singleDays);
 
     let content = "";
     
