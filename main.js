@@ -1,4 +1,11 @@
     const notInSh = ["20170323", "20180323","20190323","20190723", "20200326", "20200328", "20200406", "20200412"];
+    // Sorting the array to by date
+    function sortDates(dates) {
+        return dates.sort((a,b) => {
+            return moment(a) - moment(b)
+        });
+    }
+    // console.log(sortDates(notInSh));
 
     let content = "";
     
